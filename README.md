@@ -40,21 +40,36 @@ El proyecto está diseñado para ser modular, fácil de usar y adaptado para int
 
 ### **Estructura del Proyecto**
 ```
-Model_Inference/
-├── data/
-│   ├── Synthetic_Single_Crystals.csv   # Datos de prueba para inferencia
-│   ├── Naturally_Occurring_Minerals.csv # Dataset para entrenamiento
-├── models/
-│   ├── xgboost_model.joblib           # Modelo entrenado
-├── src/
+Mohs_Hardness_Inference/
+├── Model_Training/                       # Carpeta para el pipeline de entrenamiento
 │   ├── data/
-│   │   ├── data_processor.py          # Funciones de preprocesamiento
-│   ├── inference.py                   # Pipeline de inferencia
-│   ├── train_main.py                  # Pipeline de entrenamiento
-│   ├── main.py                        # Script principal para inferencia
-├── requirements.txt                   # Dependencias necesarias
-├── Dockerfile                         # Configuración para Docker
-└── README.md                          # Este archivo
+│   │   ├── Naturally_Occurring_Minerals.csv   # Dataset para entrenamiento
+│   ├── models/
+│   │   ├── xgboost_model.joblib              # Modelo entrenado
+│   ├── src/
+│   │   ├── data/
+│   │   │   ├── data_loader.py                # Carga de datos
+│   │   │   ├── data_processor.py            # Preprocesamiento de datos
+│   │   ├── model/
+│   │   │   ├── trainer.py                   # Pipeline de entrenamiento
+│   │   │   ├── evaluator.py                 # Evaluación del modelo
+│   │   │   ├── saver.py                     # Guardado del modelo
+│   │   ├── main.py                          # Script principal para entrenamiento
+├── Model_Inference/                       # Carpeta para el pipeline de inferencia
+│   ├── data/
+│   │   ├── Synthetic_Single_Crystals.csv    # Datos para inferencia
+│   ├── models/
+│   │   ├── xgboost_model.joblib             # Modelo cargado para inferencia
+│   ├── src/
+│   │   ├── data/
+│   │   │   ├── data_processor.py            # Preprocesamiento de datos
+│   │   │   ├── inference.py                 # Pipeline de inferencia
+│   │   ├── main.py                          # Script principal para inferencia
+├── LICENSE                                 # Licencia del proyecto
+├── README.md                               # Documentación del proyecto
+├── pyproject.toml                          # Configuración de dependencias con Poetry
+├── poetry.lock                             # Lockfile de Poetry
+
 ```
 
 ### **Requisitos**
