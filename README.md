@@ -1,4 +1,4 @@
-# **Determinacin de la dureza de Minerales Sintéticos**
+# **Determinación de la dureza de Minerales Sintéticos**
 
 Este proyecto implementa un pipeline de Machine Learning para predecir la dureza de cristales sintéticos, utilizando modelos basados en características numéricas extraídas de un dataset de minerales naturales.
 
