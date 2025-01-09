@@ -7,7 +7,7 @@ El objetivo principal es **predecir la dureza Mohs** (`Hardness`) de los mineral
 
 Este análisis se enfoca en entender la estructura, calidad y posibles desafíos del dataset, sirviendo como base para un modelo predictivo.
 
-## **Descripción de las Columnas**
+### **Descripción de las Columnas**
 
 A continuación, se describen las columnas presentes en el dataset:
 
@@ -28,7 +28,8 @@ A continuación, se describen las columnas presentes en el dataset:
 | `density_Average`          | Numérica     | Promedio de la densidad de los elementos que componen el mineral.                              |
 ---
 
-**Descripción del Proyecto**
+### **Descripción del Proyecto**
+
 El objetivo es automatizar el proceso de clasificación de minerales basándonos en su dureza, una característica crítica para su uso industrial. Utilizando un modelo de **XGBoost**, el pipeline incluye:
 1. Preprocesamiento de datos.
 2. Entrenamiento del modelo.
@@ -37,7 +38,7 @@ El objetivo es automatizar el proceso de clasificación de minerales basándonos
 
 El proyecto está diseñado para ser modular, fácil de usar y adaptado para integrarse en flujos de trabajo industriales.
 
-**Estructura del Proyecto**
+### **Estructura del Proyecto**
 ```
 Model_Inference/
 ├── data/
@@ -56,7 +57,7 @@ Model_Inference/
 └── README.md                          # Este archivo
 ```
 
-**Requisitos**
+### **Requisitos**
 1. **Python 3.8 o superior.**
 2. Instalar las dependencias listadas en `requirements.txt`:
    ```bash
@@ -69,7 +70,7 @@ Model_Inference/
 
 3. Tener Docker instalado si planeas usar contenedores.
 
-**Cómo ejecutar el proyecto**
+### **Cómo ejecutar el proyecto**
 
 **1. Entrenamiento del modelo**
 Ejecuta el pipeline de entrenamiento para generar el modelo `xgboost_model.joblib`:
@@ -97,7 +98,7 @@ Esto realizará:
 4. Generación de predicciones.
 5. Guardado de las predicciones en `data/Inference_Results.csv`.
 
-**Uso con Docker**
+### **Uso con Docker**
 **1. Construir la imagen de Docker:**
 ```bash
 docker build -t model_training .
